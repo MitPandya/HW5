@@ -10,10 +10,14 @@ Manual configuration of system is error-prone and labor intensive, requires time
    * Greater agility and decreased risk in building infrastructures.
    * Configuration management tools are easy to learn and master hence ease of usability and provides greater flexibility for developers      in configuration of softwares.
 
-* Explain the difference bewteen continuous integration, continuous delivery, and continuous deployment, in your own words.
+* Explain the difference bewteen continuous integration, continuous delivery, and continuous deployment, in your own words.<br />
 **Answer : Continuous Integration** or CI is a practice in which developers build and test their software based on other software changes committed on source repo. and thus future merges becomes easy and the integration does not become complex at the time of releases. In CI automated regressions are run everytime there is a new commit and hence reduces the bugs at the time of release.
 **Continuous Delivery** emphasizes at delivering releases to production like environment after every change that passes tests and regressions. Hence after testing the code in production like environment developers can check how it will work at customer site and can troubleshoot on bugs or error earlier before releases.
 **Continuous Deployment** is a one step advance of continuous delivery in which software changes are deployed at production environment after every change that passes production pipeline regressions and tests. In continuous deployment practice releases are made often to customers and customer feedback also becomes often which can be useful for any change or improvement.
+
+The main differences between each is the levels till which it cann communicate. CI lifecycle is Dev->Application test->Integration test
+, Continuous delivery lifecycle is Dev->Application test->Integration test->Production like environment manually, where as Continuous Deployment lifecycle is Dev->Application test->Integration test->Production environment through automation.
+Further CI emphasis on building release but does not produce any release and requires a continuous integration server which monitors changes committed to the main branch of the repo and run the automation tests, developers require to merge their changes frequently generally on daily basis. Continuous delivery requires automated deployments to production like environment but through manual trigger. Developers needs to be cautious as what goes to continuous delivery so that half implemented softwares do not go to production like environments. Continuous deployment requires better test and regression suits since the feature is directly released to production environment and also developers needs to keep up with the documentation since customers needs to understand about new features and how to use them etc. 
 
 
 ## Steps to run ansible and playbook
