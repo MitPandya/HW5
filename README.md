@@ -25,7 +25,7 @@ Manual configuration of system is error-prone and labor intensive, requires time
 #### Configuration Management and Continuous Deployment Demo which performs setup and tasks<br />
 [CSC-510: HW5 Screencast](https://youtu.be/FW63sGpN8yw).
 
-### REFERENCES
+#### References
 * http://docs.ansible.com/ansible/latest/playbooks.html
 * http://docs.ansible.com/ansible/latest/apt_module.html
 * http://docs.ansible.com/ansible/latest/git_module.html
