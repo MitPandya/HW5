@@ -12,6 +12,15 @@ Manual configuration of system is error-prone and labor intensive, requires time
 
 * Explain the difference bewteen continuous integration, continuous delivery, and continuous deployment, in your own words.
 
+## Steps to run ansible and playbook
+* Create to vagrant vms called ansible and node0 running at private network 192.168.33.10 and 192.168.33.100 respectively as described in this [workshop](https://github.com/CSC-DevOps/CM/blob/master/VM.md)
+* After following steps described in workshop do vagrant ssh inside `\boxes\ansible` folder
+* Do `vagrant ssh`
+* Follow steps in this [file](https://github.com/CSC-DevOps/CM/blob/master/Ansible.md) till 'Setting up ssh keys'
+* Try `ssh -i keys/node0.key vagrant@192.168.33.100`
+* If ssh was successful exit and run `ansible-playbook -i inventory hw5-playbook.yml`
+* On success you can check output on browser at http://192.168.33.100:8085
+
 ## Screencast
 #### Configuration Management and Continuous Deployment Demo which performs setup and tasks<br />
 [CSC-510: HW5 Screencast](https://youtu.be/FW63sGpN8yw).
