@@ -11,6 +11,10 @@ Manual configuration of system is error-prone and labor intensive, requires time
    * Configuration management tools are easy to learn and master hence ease of usability and provides greater flexibility for developers      in configuration of softwares.
 
 * Explain the difference bewteen continuous integration, continuous delivery, and continuous deployment, in your own words.
+**Answer : Continuous Integration** or CI is a practice in which developers build and test their software based on other software changes committed on source repo. and thus future merges becomes easy and the integration does not become complex at the time of releases. In CI automated regressions are run everytime there is a new commit and hence reduces the bugs at the time of release.
+**Continuous Delivery** emphasizes at delivering releases to production like environment after every change that passes tests and regressions. Hence after testing the code in production like environment developers can check how it will work at customer site and can troubleshoot on bugs or error earlier before releases.
+**Continuous Deployment** is a one step advance of continuous delivery in which software changes are deployed at production environment after every change that passes production pipeline regressions and tests. In continuous deployment practice releases are made often to customers and customer feedback also becomes often which can be useful for any change or improvement.
+
 
 ## Steps to run ansible and playbook
 * Create to vagrant vms called ansible and node0 running at private network 192.168.33.10 and 192.168.33.100 respectively as described in this [workshop](https://github.com/CSC-DevOps/CM/blob/master/VM.md)
