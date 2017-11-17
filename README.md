@@ -11,3 +11,7 @@ Manual configuration of system is error-prone and labor intensive, requires time
    * Configuration management tools are easy to learn and master hence ease of usability and provides greater flexibility for developers in      configuration of softwares.
 
 * Explain the difference bewteen continuous integration, continuous delivery, and continuous deployment, in your own words.
+
+## Screencast
+#### Configuration Management and Continuous Deployment Demo which performs setup and tasks<br />
+[CSC-510: HW5 Screencast](https://youtu.be/FW63sGpN8yw).
