@@ -1,0 +1,78 @@
+---
+- hosts: all
+  gather_facts: no
+  become: yes
+
+  tasks:
+
+  - debug:
+      msg: 'Ping node0 to check for connectivity'
+
+  - name: ping all hosts  
+    ping:               
+  
+  - debug: 
+      msg: 'Ping successful, running setup'
+
+  - name: Update apt-get
+    apt:
+      update_cache: yes
+
+  - name: Install npm
+    apt: 
+      name: npm
+      state: latest
+      update_cache: yes
+
+  - name: Install node.js
+    apt: 
+      name: nodejs-legacy
+      state: latest
+      update_cache: yes
+
+  - name: Check if node.js is installed
+    shell: node -v | rev | cut -d ' ' -f1 | rev
+    register: node_version
+
+  - debug: var=node_version
+
+  - name: Install forever
+    npm: 
+      name: forever
+      state: latest
+      global: yes
+ 
+  - name: Install git
+    apt: 
+      name: git
+      state: latest
+      
+
+  - name: Clone git repo https://github.com/CSC-DevOps/App
+    git:
+      repo: 'https://github.com/CSC-DevOps/App'
+      dest: /root/App
+
+  - name: NPM install
+    shell: npm install
+    args:
+        chdir: /root/App
+
+  - debug: 
+      msg: 'Setup complete, running tasks'
+
+  - name: Run the App using forever
+    command: forever start /root/App/main.js 8085
+
+  - name: Install bash, openssl, openssh-client, openssh-server
+    apt: name={{item}} state=latest install_recommends=no
+    with_items:
+          - bash
+          - openssl
+          - openssh-client
+          - openssh-server
+
+  - debug:
+       msg: 'Clearing contents of /tmp/ directory'
+  - file: path=/tmp state=absent
+  - file: path=/tmp state=directory
