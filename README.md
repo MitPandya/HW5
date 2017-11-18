@@ -16,10 +16,12 @@ Manual configuration of system is error-prone and labor intensive, requires time
    * Enhanced system reliability through more rapid detection and correction of improper configurations.
    * Greater agility and decreased risk in building infrastructures.
    * Configuration management tools are easy to learn and master hence ease of usability and provides greater flexibility for developers      in configuration of softwares.
+   * There are many CM tools which are open-source and can be enhanced and integrated according to the project need.
 
 **What can go wrong?**
 * Configuration management tools requires developers to have expertise of language it uses and planning of infrastructure ahead. Since cm tools run parallelly from top to down, the tasks needs to be defined in such a way that dependencies needs to be integrated before.
-Moreover developers and cm tool needs to be cautious before taking down an environment. If an environment depends on other and taking down the dependent environment may cause the production act wrong or may even crash. 
+Moreover developers and cm tool needs to be cautious before taking dow
+n an environment. If an environment depends on other and taking down the dependent environment may cause the production act wrong or may even crash. 
 Another important concern is that developers should define additional check after starting or stopping any environment for e.g. if a cm tool is intended to stop a production like environment after certain tests but fails to stop that and if customer queries are still redirected to production like environments instead of actual production environment then there may be misleading or false data and may affect the users negatively.
 * There are many different types of configuration management tools available, each of which has its own advantages and disadvantages hence it is equally important to choose the right type of cm tool suitable to the software infrastructure, cm tools are also hard to debug so developers needs to be cautious while writing automation scripts.
 
