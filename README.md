@@ -1,5 +1,12 @@
 # HW5 - Configuration Management and Continuous Deployment
 
+Ansible playbook
+* **Setup: (40 points)** 
+* Refer to [hw5-playbook.yml](hw5-playbook.yml)
+    
+* **Tasks: (40 points)**:
+* Refer to [hw5-playbook.yml](hw5-playbook.yml)
+
 * **Concepts**:
 
 * Why should developers use configuration management tools to manage their software programs? What can go wrong
