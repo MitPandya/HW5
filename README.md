@@ -38,6 +38,7 @@ Further CI emphasis on building release but does not produce any release and req
 |flow|Dev->Application test->Integration test|Dev->Application test->Integration test->Production like environment|Dev->Application test->Integration test->Production environment|
 |deployment type|commits to source branch|production like environment|production environment|
 |focuses on|synchronised repo,automated testing on merge|automated deployments through manual trigger|continuous releases to customers|
+|requires|continuous integration server,automation tests|automated deployments through manual trigger|better test and regression suits, automated deployment|
 
 ## Steps to run ansible and playbook
 * Create to vagrant vms called ansible and node0 running at private network 192.168.33.10 and 192.168.33.100 respectively as described in this [workshop](https://github.com/CSC-DevOps/CM/blob/master/VM.md)
