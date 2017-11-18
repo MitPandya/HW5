@@ -51,7 +51,7 @@ Further CI emphasis on building release but does not produce any release and req
 
 ## Screencast
 #### Configuration Management and Continuous Deployment Demo which performs setup and tasks<br />
-[CSC-510: HW5 Screencast](https://youtu.be/EdkIhRGGWSQ).
+[CSC-510: HW5 Screencast](https://youtu.be/ar-SYPNc3J4).
 
 #### References
 * http://docs.ansible.com/ansible/latest/playbooks.html
