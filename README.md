@@ -9,19 +9,21 @@ Ansible playbook
 
 * **Concepts**:
 
-* Why should developers use configuration management tools to manage their software programs? What can go wrong
+**1: Why should developers use configuration management tools to manage their software programs? What can go wrong?**<br />
 **Answer :** The fundamental purpose of configuration management is to provide and maintain integrity,evaluation, coordination and implementation in changes of the artifacts, small software pieces, used to construct and maintain software systems. Several configuration management tools such as puppet,chef, ansible etc. are designed to manage IT infrastructure and related application with the up-to-date information on system sunctions and interrelationships between all software and hardware, and are accustomed to ever-changing and complex infrastructure which would be hard to manage otherwise.
 Manual configuration of system is error-prone and labor intensive, requires time and effort. With more complex infrastructures it becomes tedious over time. Configuration management tools aims at minimizing manual efforts by automation in configuration. Developers should use the configuration management tools for the following key benefits.
    * Increased efficiencies, stability and control by improving visibility, tracking and powerful documentation.
    * Enhanced system reliability through more rapid detection and correction of improper configurations.
    * Greater agility and decreased risk in building infrastructures.
    * Configuration management tools are easy to learn and master hence ease of usability and provides greater flexibility for developers      in configuration of softwares.
+
+**What can go wrong?**
 * Configuration management tools requires developers to have expertise of language it uses and planning of infrastructure ahead. Since cm tools run parallelly from top to down, the tasks needs to be defined in such a way that dependencies needs to be integrated before.
 Moreover developers and cm tool needs to be cautious before taking down an environment. If an environment depends on other and taking down the dependent environment may cause the production act wrong or may even crash. 
 Another important concern is that developers should define additional check after starting or stopping any environment for e.g. if a cm tool is intended to stop a production like environment after certain tests but fails to stop that and if customer queries are still redirected to production like environments instead of actual production environment then there may be misleading or false data and may affect the users negatively.
 * There are many different types of configuration management tools available, each of which has its own advantages and disadvantages hence it is equally important to choose the right type of cm tool suitable to the software infrastructure, cm tools are also hard to debug so developers needs to be cautious while writing automation scripts.
 
-* Explain the difference bewteen continuous integration, continuous delivery, and continuous deployment, in your own words.<br />
+**2 : Explain the difference bewteen continuous integration, continuous delivery, and continuous deployment, in your own words.**<br />
 **Answer : Continuous Integration** or CI is a practice in which developers build and test their software based on other software changes committed on source repo. and thus future merges becomes easy and the integration does not become complex at the time of releases. In CI automated regressions are run everytime there is a new commit and hence reduces the bugs at the time of release.
 **Continuous Delivery** emphasizes at delivering releases to production like environment after every change that passes tests and regressions. Hence after testing the code in production like environment developers can check how it will work at customer site and can troubleshoot on bugs or error earlier before releases.
 **Continuous Deployment** is a one step advance of continuous delivery in which software changes are deployed at production environment after every change that passes production pipeline regressions and tests. In continuous deployment practice releases are made often to customers and customer feedback also becomes often which can be useful for any change or improvement.
