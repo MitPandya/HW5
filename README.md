@@ -39,3 +39,4 @@ Further CI emphasis on building release but does not produce any release and req
 * http://docs.ansible.com/ansible/latest/npm_module.html
 * http://docs.ansible.com/ansible/latest/file_module.html
 * https://en.wikipedia.org/wiki/Software_configuration_management
+* https://stackoverflow.com/questions/28608015/continuous-integration-vs-continuous-delivery-vs-continuous-deployment
